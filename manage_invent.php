@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Add-Inventory</title>
-    <link rel="stylesheet" href="css/addinventory.css" />
+    <link rel="stylesheet" href="css/scan_invent.css" />
 </head>
 
 <body>
@@ -27,13 +27,13 @@
                     </a>
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="lab_assist.php">
                         <span class="icon"><ion-icon name="person-outline"></ion-icon></span>
                         <span class="title">Lab Assistants</span>
                     </a>
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="scan_invent.php">
                         <span class="icon"><ion-icon name="scan-outline"></ion-icon></span>
                         <span class="title">Scanned Inventories</span>
                     </a>
@@ -45,7 +45,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="manage_invent.php">
                         <span class="icon"><ion-icon name="settings-outline"></ion-icon></span>
                         <span class="title">Manage Inventory</span>
                     </a>
@@ -68,44 +68,12 @@
                 </div>
             </div>
             <!-- Inventory addition form -->
-            <div class="Container1">
 
-                <h1>Add Inventory to Lab</h1>
 
-                <form action="inventory.php" method="post">
-                    <label for="serial-no">Serial No:</label>
-                    <input type="text" id="serial-no" name="serial_no" required>
-                    <label for="purchase-date">Purchase Date:</label>
-                    <input type="date" id="purchase-date" name="purchase_date" required>
-                    <br><br>
-                    <label for="Inventory-Description">Inventory Description:</label>
-                    <input type="Text" id="Inventory-Description" name="Inventory_Description" required>
-                    <label for="labrotary">Labrotary:</label>
-                    <select id="labrotary" name="labrotary" required>
-                        <option value="">Select a Labrotary</option>
-                        <option value="MB-407-A">MB-407-A</option>
-                        <option value="MB-407-B">MB-407-B</option>
-                        <option value="MB-408-A">MB-408-A</option>
-                        <option value="MB-408-B">MB-408-B</option>
-                        <option value="MB-409">MB-409</option>
-                        <option value="MB-413">MB-413</option>
-                        <option value="MB-414">MB-414</option>
+            <h2>Manage Inventory</h2>
 
-                    </select>
-                    <label for="Purchase-Price">Purchase Price:</label>
-                    <input type="number" id="Purchase-Price" name="Purchase_Price" required>
-                    <label for="dsr-number">DSR Number:</label>
-                    <input type="text" id="dsr-number" name="dsr_number" required>
-                    <label for="Assistant-Confirmed">Assistant Confirmed:</label>
-                    <input type="text" id="Assistant-Confirmed" name="Assistant_Confirmed" required>
 
-                    <input type="submit" name='additem' value="Add Item">
-
-                </form>
-            </div>
-
-        </div>
-
+           
         <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
         <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
         <script>

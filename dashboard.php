@@ -27,15 +27,15 @@
                     </a>
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="lab_assist.php">
                         <span class="icon"><ion-icon name="person-outline"></ion-icon></span>
                         <span class="title">Lab Assistants</span>
                     </a>
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="scan_invent.php">
                         <span class="icon"><ion-icon name="scan-outline"></ion-icon></span>
-                        <span class="title">Scaned Inventories</span>
+                        <span class="title">Scanned Inventories</span>
                     </a>
                 </li>
                 <li>
@@ -45,7 +45,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="manage_invent.php">
                         <span class="icon"><ion-icon name="settings-outline"></ion-icon></span>
                         <span class="title">Manage Inventory</span>
                     </a>
@@ -83,7 +83,7 @@
                 <div class="card">
                     <div>
                         <div class="numbers">490</div>
-                        <div class="cardName">Laboratory MB-407-A</div>
+                        <div class="cardName">Lab MB-407-A</div>
                     </div>
                     <div class="iconBx">
                         <ion-icon name="desktop-outline"></ion-icon>
@@ -92,7 +92,7 @@
                 <div class="card">
                     <div>
                         <div class="numbers">600</div>
-                        <div class="cardName">Laboratory MB-407-B</div>
+                        <div class="cardName">Lab MB-407-B</div>
                     </div>
                     <div class="iconBx">
                         <ion-icon name="desktop-outline"></ion-icon>
@@ -101,7 +101,7 @@
                 <div class="card">
                     <div>
                         <div class="numbers">800</div>
-                        <div class="cardName">Laboratory MB-408-A</div>
+                        <div class="cardName">Lab MB-408-A</div>
                     </div>
                     <div class="iconBx">
                         <ion-icon name="desktop-outline"></ion-icon>
@@ -110,7 +110,7 @@
                 <div class="card">
                     <div>
                         <div class="numbers">300</div>
-                        <div class="cardName">Laboratory MB-408-B</div>
+                        <div class="cardName">Lab MB-408-B</div>
                     </div>
                     <div class="iconBx">
                         <ion-icon name="desktop-outline"></ion-icon>
@@ -119,7 +119,7 @@
                 <div class="card">
                     <div>
                         <div class="numbers">300</div>
-                        <div class="cardName">Laboratory MB-409</div>
+                        <div class="cardName">Lab MB-409</div>
                     </div>
                     <div class="iconBx">
                         <ion-icon name="desktop-outline"></ion-icon>
@@ -128,7 +128,7 @@
                 <div class="card">
                     <div>
                         <div class="numbers">300</div>
-                        <div class="cardName">Laboratory MB-413</div>
+                        <div class="cardName">Lab MB-413</div>
                     </div>
                     <div class="iconBx">
                         <ion-icon name="desktop-outline"></ion-icon>
@@ -137,7 +137,7 @@
                 <div class="card">
                     <div>
                         <div class="numbers">300</div>
-                        <div class="cardName">Laboratory MB-414</div>
+                        <div class="cardName">Lab MB-414</div>
                     </div>
                     <div class="iconBx">
                         <ion-icon name="desktop-outline"></ion-icon>

@@ -1,6 +1,6 @@
 <?php
 session_start();
-include_once('connection.php');
+include_once ('connection.php');
 
 // Form handling
 
@@ -40,8 +40,3 @@ if (isset($_POST['additem'])) {
 
 }
 
-
-// Close connection
-
-$conn->close();
-?>
