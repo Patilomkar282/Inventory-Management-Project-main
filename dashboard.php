@@ -28,7 +28,7 @@
                 </li>
                 <li>
                     <a href="lab_assist.php">
-                        <span class="icon"><ion-icon name="person-outline"></ion-icon></span>
+                        <span class="icon"><ion-icon name="people-outline"></ion-icon></span>
                         <span class="title">Lab Assistants</span>
                     </a>
                 </li>
@@ -248,7 +248,7 @@
                                 <div class="imgBx"><img src="./images/img1.jpg" /></div>
                             </td>
                             <td>
-                                <h4>Amellia<br /><span>Assistant 1</span></h4>
+                                <h4>Tejashree<br /><span>Assistant 1</span></h4>
                             </td>
                         </tr>
                         <tr>
@@ -256,7 +256,7 @@
                                 <div class="imgBx"><img src="./images/img2.jpg" /></div>
                             </td>
                             <td>
-                                <h4>David<br /><span>Assistant 2</span></h4>
+                                <h4>Omkar<br /><span>Assistant 2</span></h4>
                             </td>
                         </tr>
                         <tr>
@@ -264,7 +264,7 @@
                                 <div class="imgBx"><img src="./images/img3.jpg" /></div>
                             </td>
                             <td>
-                                <h4>Amit<br /><span>Assistant 3</span></h4>
+                                <h4>Shantanu<br /><span>Assistant 3</span></h4>
                             </td>
                         </tr>
                         <tr>
@@ -272,39 +272,7 @@
                                 <div class="imgBx"><img src="./images/img4.jpg" /></div>
                             </td>
                             <td>
-                                <h4>Olivia<br /><span>Assistant 4</span></h4>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td width="60px">
-                                <div class="imgBx"><img src="./images/img5.jpg" /></div>
-                            </td>
-                            <td>
-                                <h4>Muhammad<br /><span>Assistant 5</span></h4>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td width="60px">
-                                <div class="imgBx"><img src="./images/img2.jpg" /></div>
-                            </td>
-                            <td>
-                                <h4>Ashraf<br /><span>Assistant 6</span></h4>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td width="60px">
-                                <div class="imgBx"><img src="./images/img1.jpg" /></div>
-                            </td>
-                            <td>
-                                <h4>Diana<br /><span>Assistant 7</span></h4>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td width="60px">
-                                <div class="imgBx"><img src="./images/img5.jpg" /></div>
-                            </td>
-                            <td>
-                                <h4>Amit<br /><span>Assistant 8</span></h4>
+                                <h4>Kalyani<br /><span>Assistant 4</span></h4>
                             </td>
                         </tr>
                     </table>

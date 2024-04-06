@@ -9,8 +9,8 @@
 </head>
 
 <body>
-    <div class="container">
-        <div class="navigation">
+     <div class="container">
+       <div class="navigation">
             <ul>
                 <li>
                     <a href="#">
@@ -28,7 +28,7 @@
                 </li>
                 <li>
                     <a href="#">
-                        <span class="icon"><ion-icon name="person-outline"></ion-icon></span>
+                        <span class="icon"><ion-icon name="people-outline"></ion-icon></span>
                         <span class="title">Lab Assistants</span>
                     </a>
                 </li>
@@ -72,7 +72,7 @@
 
                 <h1>Add Inventory to Lab</h1>
 
-                <form action="inventory.php" method="post">
+                <form action="" method="post" id="inventory">
                     <label for="serial-no">Serial No:</label>
                     <input type="text" id="serial-no" name="serial_no" required>
                     <label for="purchase-date">Purchase Date:</label>
@@ -80,9 +80,9 @@
                     <br><br>
                     <label for="Inventory-Description">Inventory Description:</label>
                     <input type="Text" id="Inventory-Description" name="Inventory_Description" required>
-                    <label for="labrotary">Labrotary:</label>
+                    <label for="labrotary">Laboratory:</label>
                     <select id="labrotary" name="labrotary" required>
-                        <option value="">Select a Labrotary</option>
+                        <option value="">Select a Laboratory</option>
                         <option value="MB-407-A">MB-407-A</option>
                         <option value="MB-407-B">MB-407-B</option>
                         <option value="MB-408-A">MB-408-A</option>
@@ -98,13 +98,45 @@
                     <input type="text" id="dsr-number" name="dsr_number" required>
                     <label for="Assistant-Confirmed">Assistant Confirmed:</label>
                     <input type="text" id="Assistant-Confirmed" name="Assistant_Confirmed" required>
-
-                    <input type="submit" name='additem' value="Add Item">
+                    <!-- <input type="submit" name='additem' value="Add Inventory"> -->
+                    <!-- <button name='additem' value="Generate QR Code" onclick="generateQRCode()"> -->
+                    <button type="button"name='additem' onclick="generateQRCode()">Generate QR Code</button>
 
                 </form>
+
+
             </div>
 
         </div>
+
+
+        <div id="qrcode"></div>
+        <script src="https://cdn.jsdelivr.net/gh/davidshimjs/qrcodejs/qrcode.min.js"></script>
+
+        <script>
+            function generateQRCode() {
+                var formData = new FormData(document.getElementById("inventory"));
+                var data = "";
+
+                formData.forEach(function (value, key) {
+                    data += key + ": " + value + "\n";
+                });
+
+                if (data.trim() !== "") {
+                    var qrCodeDiv = document.getElementById("qrcode");
+                    qrCodeDiv.innerHTML = ""; // Clear previous QR code if any
+
+                    var qrcode = new QRCode(qrCodeDiv, {
+                        text: data,
+                        width: 128,
+                        height: 128
+                    });
+                } else {
+                    alert("Please enter some data first.");
+                }
+            }
+        </script>
+
 
         <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
         <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>

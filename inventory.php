@@ -31,6 +31,7 @@ if (isset($_POST['additem'])) {
     if ($conn->query($sql) === TRUE) {
 
         echo "New record created successfully";
+        
 
     } else {
 

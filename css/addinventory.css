@@ -242,8 +242,7 @@ select {
 }
 
 
-input[type="submit"] {
-
+button{
   background-color: var(--blue);
 
   color: #fff;
@@ -258,13 +257,21 @@ input[type="submit"] {
 
   font-size: 16px;
 
-  margin-left: 42%;
+  margin-left: 18%;
 
 }
 
 
-input[type="submit"]:hover {
+button:hover {
 
   background-color: #3569d6;
 
+}
+
+  #qrcode {
+    position: absolute;
+    top: 500px;
+    left: 400px; 
+    width: 200px;
+    height: 200px;  
 }

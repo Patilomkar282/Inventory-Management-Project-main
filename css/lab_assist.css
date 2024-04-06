@@ -172,3 +172,62 @@ body {
   cursor: pointer;
 }
 
+
+.cardBox {
+  margin-left: 10%;
+  position: relative;
+  width: 80%;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 30px;
+}
+
+.cardBox .card {
+  position: relative;
+  background: var(--white);
+  padding: 30px;
+  border-radius: 20px;
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+  box-shadow: 0 7px 25px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.cardBox .card .numbers {
+  position: relative;
+  font-weight: 500;
+  font-size: 2.5em;
+  color: var(--blue);
+}
+
+.cardBox .card .cardName {
+  color: var(--black2);
+  font-size: 1.1em;
+  margin-top: 5px;
+}
+
+.cardBox .card .iconBx {
+  font-size: 3.5em;
+  color: var(--black2);
+}
+
+.cardBox .card:hover {
+  background: var(--blue);
+  transform: translate3D(0, -5px, 0) scale(1.02); /* move the card up and expand it slightly on hover */
+}
+
+.cardBox .card:hover .numbers ,
+.cardBox .card:hover .cardName ,
+.cardBox .card:hover .iconBx 
+{
+    color: var(--white);
+    
+}
+
+
+
+
+
+

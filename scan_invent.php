@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Add-Inventory</title>
+    <title>Scanned-Inventory</title>
     <link rel="stylesheet" href="css/scan_invent.css" />
 </head>
 
@@ -28,7 +28,7 @@
                 </li>
                 <li>
                     <a href="lab_assist.php">
-                        <span class="icon"><ion-icon name="person-outline"></ion-icon></span>
+                        <span class="icon"><ion-icon name="people-outline"></ion-icon></span>
                         <span class="title">Lab Assistants</span>
                     </a>
                 </li>
