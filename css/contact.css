@@ -1,0 +1,62 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+h1 {
+    text-align: center;
+    color: blue;
+    margin-bottom: 20px;
+}
+
+.card-container {
+    display: grid;
+    margin: 50px;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 2fr));
+    /* grid-template-columns: repeat(2, 1fr); */
+    gap: 50px;
+}
+
+.card {
+    background-color: #f8f8f8;
+    padding-top: 20px;
+    padding-left: 30px;
+    padding-bottom: 20px;
+    border-radius: 5px;
+    box-shadow: 0 8px 10px rgba(5, 5, 20, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translate3D(0, -5px, 0) scale(1.02); /* move the card up and expand it slightly on hover */
+}
+
+.card h2 {
+    text-align: center;
+    color: blue;
+    margin-bottom: 10px;
+}
+
+.social-media {
+    text-align: start;
+    display: flex;
+    
+}
+
+.social-media a {
+    text-align: start;
+    color:black;
+    text-decoration: none;
+}
+
+.social-media a:hover {
+    color: #007bff;
+}
+
