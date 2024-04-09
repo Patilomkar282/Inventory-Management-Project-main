@@ -103,6 +103,7 @@
                             ?>
                         </div>
                         <div class="cardName"><a href='./Labs/Lab407A.php'>Lab MB-407-A</a></div>
+                        
                     </div>
                     <div class="iconBx">
                         <ion-icon name="desktop-outline"></ion-icon>
@@ -130,6 +131,7 @@
                             ?>
                             </div>
                         <div class="cardName"><a href='./Labs/Lab407B.php'>Lab MB-407-B</a></div>
+                        
                     </div>
                     <div class="iconBx">
                         <ion-icon name="desktop-outline"></ion-icon>
@@ -157,6 +159,7 @@
                             ?>
                             </div>
                         <div class="cardName"><a href='./Labs/Lab408A.php'>Lab MB-408-A</a></div>
+                       
                     </div>
                     <div class="iconBx">
                         <ion-icon name="desktop-outline"></ion-icon>
@@ -183,6 +186,7 @@
 
                             ?></div>
                         <div class="cardName"><a href='./Labs/Lab408B.php'>Lab MB-408-B</a></div>
+                        
                     </div>
                     <div class="iconBx">
                         <ion-icon name="desktop-outline"></ion-icon>
@@ -210,6 +214,7 @@
                             ?>
                             </div>
                         <div class="cardName"><a href='./Labs/Lab409.php'>Lab MB-409</a></div>
+                        
                     </div>
                     <div class="iconBx">
                         <ion-icon name="desktop-outline"></ion-icon>
@@ -237,6 +242,7 @@
                             ?>
                             </div>
                         <div class="cardName"><a href='./Labs/Lab413.php'>Lab MB-413</a></div>
+                       
                     </div>
                     <div class="iconBx">
                         <ion-icon name="desktop-outline"></ion-icon>
@@ -264,6 +270,7 @@
                             ?>
                             </div>
                         <div class="cardName"><a href='./Labs/Lab414.php'>Lab MB-414</a></div>
+                      
                     </div>
                     <div class="iconBx">
                         <ion-icon name="desktop-outline"></ion-icon>
@@ -365,6 +372,50 @@
             </div>
         </div>
        
+
+            
+
+                <div class="recentCustomers">
+                    <div class="cardHeader">
+                        <h2>Lab Assistants</h2>
+                    </div>
+                    <table>
+                        <tr>
+                            <td width="60px">
+                                <div class="imgBx"><img src="./images/img1.jpg" /></div>
+                            </td>
+                            <td>
+                                <h4>Tejashree<br /><span>Assistant 1</span></h4>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td width="60px">
+                                <div class="imgBx"><img src="./images/img2.jpg" /></div>
+                            </td>
+                            <td>
+                                <h4>Omkar<br /><span>Assistant 2</span></h4>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td width="60px">
+                                <div class="imgBx"><img src="./images/img3.jpg" /></div>
+                            </td>
+                            <td>
+                                <h4>Shantanu<br /><span>Assistant 3</span></h4>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td width="60px">
+                                <div class="imgBx"><img src="./images/img4.jpg" /></div>
+                            </td>
+                            <td>
+                                <h4>Kalyani<br /><span>Assistant 4</span></h4>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
     </div>
 
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>

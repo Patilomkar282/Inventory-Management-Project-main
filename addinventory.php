@@ -15,6 +15,7 @@
             <ul>
                 <li>
                     <a href="">
+                    <a href="#">
                         <span class="icon"><ion-icon name="cart"></ion-icon></span>
                         <span class="logo">
                             <h2>SmartStock</h2>
@@ -29,12 +30,14 @@
                 </li>
                 <li>
                     <a href="lab_assist.php">
+                  
                         <span class="icon"><ion-icon name="people-outline"></ion-icon></span>
                         <span class="title">Lab Assistants</span>
                     </a>
                 </li>
                 <li>
                     <a href="scan_invent.php">
+                    
                         <span class="icon"><ion-icon name="scan-outline"></ion-icon></span>
                         <span class="title">Scanned Inventories</span>
                     </a>
@@ -47,6 +50,7 @@
                 </li>
                 <li>
                     <a href="manage_invent.php">
+                   
                         <span class="icon"><ion-icon name="settings-outline"></ion-icon></span>
                         <span class="title">Manage Inventory</span>
                     </a>
@@ -74,6 +78,7 @@
                 <h1>Add Inventory to Lab</h1>
 
                 <form action="inventory.php" method="post" id="inventory">
+                <form action="" method="post" id="inventory">
                     <label for="serial-no">Serial No:</label>
                     <input type="text" id="serial-no" name="serial_no" required>
                     <label for="purchase-date">Purchase Date:</label>
@@ -105,6 +110,9 @@
                     <input type="submit" id='submit'  name='additem' value="Add Item">
                     <!-- <button name='additem' value="Generate QR Code" onclick="generateQRCode()"> -->
                     <button type="button" id="imageUrlInput"  onclick="generateQRCode()" style="margin:10px;">Generate QR Code</button>
+                    <!-- <input type="submit" name='additem' value="Add Inventory"> -->
+                    <!-- <button name='additem' value="Generate QR Code" onclick="generateQRCode()"> -->
+                    
 
                 </form>
 
@@ -170,6 +178,28 @@
 
 
 
+            function generateQRCode() {
+                var formData = new FormData(document.getElementById("inventory"));
+                var data = "";
+
+                formData.forEach(function (value, key) {
+                    data += key + ": " + value + "\n";
+                });
+
+                if (data.trim() !== "") {
+                    var qrCodeDiv = document.getElementById("qrcode");
+                    qrCodeDiv.innerHTML = ""; // Clear previous QR code if any
+
+                    var qrcode = new QRCode(qrCodeDiv, {
+                        text: data,
+                        width: 128,
+                        height: 128
+                    });
+                } else {
+                    alert("Please enter some data first.");
+                }
+            }
+        </script>
 
 
         <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>

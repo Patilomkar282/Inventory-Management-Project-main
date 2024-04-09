@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Scanned-Inventory</title>
     <link rel="stylesheet" href="css/scan.css" />
+    <link rel="stylesheet" href="css/scan_invent.css" />
 </head>
 
 <body>
@@ -135,6 +136,7 @@
 
 
            
+            
             
 
 

@@ -443,6 +443,9 @@ body {
   display: flex;
   height: 380px;
   width: 300px;
+  position: relative;
+  display: grid;
+  height: 380px;
   padding: 20px;
   background: var(--white);
   box-shadow: 0 7px 25px rgba(0, 0, 0, 0.2);

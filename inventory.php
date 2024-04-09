@@ -27,11 +27,15 @@ if (isset($_POST['additem'])) {
     $sql = "INSERT INTO inventory_data (serial_no, purchase_date, inventory_description, labrotary, purchase_price, dsr_number, assistant_confirmed,images_url)
 
             VALUES ('$serial_no', '$purchase_date', '$inventory_description', '$labrotary', '$purchase_price', '$dsr_number', '$assistant_confirmed','$image_url')";
+    $sql = "INSERT INTO inventory_data (serial_no, purchase_date, inventory_description, labrotary, purchase_price, dsr_number, assistant_confirmed)
+
+            VALUES ('$serial_no', '$purchase_date', '$inventory_description', '$labrotary', '$purchase_price', '$dsr_number', '$assistant_confirmed')";
 
 
     if ($conn->query($sql) === TRUE) {
 
         echo "<script>alert('Item added successfully!')</script>";
+        echo "New record created successfully";
         
 
     } else {
