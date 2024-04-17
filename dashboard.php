@@ -73,6 +73,9 @@
                     </label>
                 </div>
                 
+                <div class="user">
+                    <img src="./images/user.jpg" />
+                </div>
             </div>
 
             <!-- cards -->
@@ -376,6 +379,7 @@
                 <div class="recentCustomers">
                     <div class="cardHeader">
                         <h2>Project Members</h2>
+                        <h2>Lab Assistants</h2>
                     </div>
                     <table>
                         <tr>
@@ -384,6 +388,7 @@
                             </td>
                             <td>
                                 <h4>Tejashree<br /><span>Member 1</span></h4>
+                                <h4>Tejashree<br /><span>Assistant 1</span></h4>
                             </td>
                         </tr>
                         <tr>
