@@ -1,0 +1,199 @@
+*{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-decoration: none;
+    font-family: Montserrat;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+}
+
+header {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: 2fr 2fr 2fr;
+    align-items: center;
+}
+
+.logo {
+    font-size: 2.8rem;
+    margin-left: 2rem;
+    color: blue !important;
+}
+
+ul{
+    display: flex;
+}
+
+ul li a{
+    color: blue;
+    margin: 0 4rem;
+    font-size: 1.6rem;
+}
+
+ul li a:hover{
+    color: white;
+    background-color: blue;
+    border-radius: 25px;
+    padding: 10px;
+    font-weight: bold;
+    transition: all 0.2s ease 0s;
+}
+
+.log-container{
+    justify-self: center;
+}
+
+.log-container a{
+    margin-left: 2rem;
+    background: blue;
+    border: none;
+    border-radius: 25px;
+    padding: 10px;
+    font-size: 1.6rem;
+    color: white;
+}
+
+.log-container a:hover{
+    color: white;
+    background-color: blue;
+    border-radius: 25px;
+    padding: 10px;
+    font-weight: bold;
+    transition: all 0.2s ease 0s;
+}
+
+.circle{
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(blue,#1d1d1d);
+    clip-path: circle(600px at left 750px);
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    filter: opacity(0.7);
+}
+
+section{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 4fr auto;
+}
+
+.vector_container img{
+    position: absolute;
+    width: 550px;
+    margin-top: 200px;
+    height: 450px;
+    left: 0;
+}
+
+.vector_container img:nth-child(1){
+    animation: fade1 15s infinite;
+}
+.vector_container img:nth-child(2){
+    animation: fade2 15s infinite;
+}
+.vector_container img:nth-child(3){
+    animation: fade3 15s infinite;
+}
+.vector_container img:nth-child(4){
+    animation: fade4 15s infinite;
+}
+
+section .content{
+    width: 600px;
+    position: relative;
+    top: 12rem;
+    right: 10rem;
+    text-align: center;
+}
+
+section .content h1{
+    color: blue;
+    font-size: 3.75rem;
+    transform: translate3D(0, -5px, 0) scale(1.02);
+}
+
+section .content p{
+    color: rgba(0, 0, 0, 0.758);
+    font-size: 2.75rem;
+    margin-bottom: 3rem;
+}
+
+section .content a{
+   color: white;
+   background-color: blue;
+   border-radius: 50px;
+   padding: 10px;
+}
+
+section img{
+    width: 500px;
+    height: 400px;
+    position: absolute;
+    right: 0;
+    margin-top: 22rem;
+    animation-name: fade;
+}
+
+@keyframes fade1 {
+    0%{
+        opacity: 1;
+    } 25%{
+        opacity: 0;
+    } 50%{
+        opacity: 0;
+    } 75%{
+        opacity: 0;
+    } 100%{
+        opacity: 1;
+    }
+}
+
+@keyframes fade2 {
+    0%{
+        opacity: 0;
+    } 25%{
+        opacity: 1;
+    } 50%{
+        opacity: 0;
+    } 75%{
+        opacity: 0;
+    } 100%{
+        opacity: 0;
+    }
+}
+
+@keyframes fade3 {
+    0%{
+        opacity: 0;
+    } 25%{
+        opacity: 0;
+    } 50%{
+        opacity: 1;
+    } 75%{
+        opacity: 0;
+    } 100%{
+        opacity: 0;
+    }
+}
+
+@keyframes fade4 {
+    0%{
+        opacity: 0;
+    } 25%{
+        opacity: 0;
+    } 50%{
+        opacity: 0;
+    } 75%{
+        opacity: 1;
+    } 100%{
+        opacity: 0;
+    }
+}
+
+

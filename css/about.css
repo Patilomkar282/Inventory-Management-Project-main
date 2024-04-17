@@ -1,0 +1,36 @@
+section{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 4fr auto;
+}
+
+section .content {
+    max-width: 600px;
+    top: 5%;
+    margin: 8%;
+    padding: 2rem;
+    background-color: white;
+}
+
+section .content h1 {
+    text-align: start;
+    color: blue;
+    font-size: 3.5rem;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+}
+
+section .content p {
+    text-align: start;
+    color: #1d1d1d;
+    font-size: 1.5rem;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+}
+
+section .img{
+    margin-top: 20%;
+    margin-right: 100px;
+    width: 550px;
+    height: 450px;
+}
