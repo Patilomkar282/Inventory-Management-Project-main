@@ -78,46 +78,10 @@
                         <div class="numbers">Assistant 1</div>
                         <div class="cardName">Dinkar Patil Sir</div>
                         <div class="cardName">Id 101</div>
-                        <div class="cardName">8999937124</div>
+                        <div class="cardName">9561555288</div>
                         <div class="cardName">Lab MB-407-A</div>
-                        <div class="cardName">dinkarpatil@mmcoe.edu.in</div>
-                    </div>
-                    <div class="iconBx">
-                        <ion-icon name="person-outline"></ion-icon>
-                    </div>
-                </div>
-                <div class="card">
-                <div>
-                        <div class="numbers">Assistant 1</div>
-                        <div class="cardName">Dinkar Patil Sir</div>
-                        <div class="cardName">Id 101</div>
-                        <div class="cardName">8999937124</div>
                         <div class="cardName">Lab MB-407-B</div>
-                        <div class="cardName">dinkarpatil@mmcoe.edu.in</div>
-                    </div>
-                    <div class="iconBx">
-                        <ion-icon name="person-outline"></ion-icon>
-                    </div>
-                </div>
-                <div class="card">
-                <div>
-                        <div class="numbers">Assistant 1</div>
-                        <div class="cardName">Dinkar Patil Sir</div>
-                        <div class="cardName">Id 101</div>
-                        <div class="cardName">8999937124</div>
                         <div class="cardName">Lab MB-408-A</div>
-                        <div class="cardName">dinkarpatil@mmcoe.edu.in</div>
-                    </div>
-                    <div class="iconBx">
-                        <ion-icon name="person-outline"></ion-icon>
-                    </div>
-                </div>
-                <div class="card">
-                <div>
-                        <div class="numbers">Assistant 1</div>
-                        <div class="cardName">Dinkar Patil Sir</div>
-                        <div class="cardName">Id 101</div>
-                        <div class="cardName">8999937124</div>
                         <div class="cardName">Lab MB-408-B</div>
                         <div class="cardName">dinkarpatil@mmcoe.edu.in</div>
                     </div>
@@ -125,7 +89,9 @@
                         <ion-icon name="person-outline"></ion-icon>
                     </div>
                 </div>
+            
 
+            
                 <div class="card">
                 <div>
                         <div class="numbers">Assistant 2</div>
@@ -133,54 +99,17 @@
                         <div class="cardName">Id 102</div>
                         <div class="cardName">9689139117</div>
                         <div class="cardName">Lab MB-409</div>
+                        <div class="cardName">Lab MB-410</div>
+                        <div class="cardName">Lab MB-413</div>
+                        <div class="cardName">Lab MB-414</div>
                         <div class="cardName">smitakari@mmcoe.edu.in</div>
                     </div>
                     <div class="iconBx">
                         <ion-icon name="person-outline"></ion-icon>
                     </div>
                 </div>
-                <div class="card">
-                <div>
-                        <div class="numbers">Assistant 2</div>
-                        <div class="cardName">Smita Kari Mam</div>
-                        <div class="cardName">Id 102</div>
-                        <div class="cardName">8999937124</div>
-                        <div class="cardName">Lab MB-412</div>
-                        <div class="cardName">dinkarpatil@mmcoe.edu.in</div>
-                    </div>
-                    <div class="iconBx">
-                        <ion-icon name="person-outline"></ion-icon>
-                    </div>
-                </div>
 
-                <div class="card">
-                <div>
-                        <div class="numbers">Assistant 2</div>
-                        <div class="cardName">Smita Kari Mam</div>
-                        <div class="cardName">Id 102</div>
-                        <div class="cardName">8999937124</div>
-                        <div class="cardName">Lab MB-413</div>
-                        <div class="cardName">dinkarpatil@mmcoe.edu.in</div>
-                    </div>
-                    <div class="iconBx">
-                        <ion-icon name="person-outline"></ion-icon>
-                    </div>
-                </div>
-
-                <div class="card">
-                <div>
-                        <div class="numbers">Assistant 2</div>
-                        <div class="cardName">Smita Kari Mam</div>
-                        <div class="cardName">Id 102</div>
-                        <div class="cardName">8999937124</div>
-                        <div class="cardName">Lab MB-414</div>
-                        <div class="cardName">dinkarpatil@mmcoe.edu.in</div>
-                    </div>
-                    <div class="iconBx">
-                        <ion-icon name="person-outline"></ion-icon>
-                    </div>
-                </div>
-
+                
 
             </div>
 

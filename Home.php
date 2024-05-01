@@ -36,7 +36,7 @@
 
         <div class="content">
             <h1>Inventory Management System</h1><br>
-            <p>Empower Your Campus: Elevate with Effective Inventory Management.</p>
+            <p>Empower Your Campus Elevate with Effective Inventory Management.</p>
         </div>
     </section>
 </body>

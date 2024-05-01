@@ -87,7 +87,7 @@
                                 <td>Labrotary</td>
                                 <td>Purchase_Price</td>
                                 <td>Dsr_Number</td>
-                                <td>Assistant Confirmed</td>
+                                
                                 
                             </tr>
                         </thead>
@@ -123,8 +123,6 @@
                     echo "<td>" . $row["Purchase_Price"] . "</td>";
 
                     echo "<td>" . $row["dsr_number"] . "</td>";
-
-                    echo "<td>" . $row["Assistant_Confirmed"] . "</td>";
 
                     echo "</tr>";
 

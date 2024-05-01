@@ -38,6 +38,7 @@ if (isset($_POST['login'])) {
                 $_SESSION['username'] = $username;
                 $_SESSION['password'] = $password;
                 header('location:dashboard.php');
+                exit();
             }
         } else {
             echo "<script>alert('Invalid Username or Password');</script>";

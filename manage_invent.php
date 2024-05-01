@@ -9,8 +9,8 @@
 </head>
 
 <body>
-     <div class="container">
-       <div class="navigation">
+    <div class="container">
+        <div class="navigation">
             <ul>
                 <li>
                     <a href="#">
@@ -93,29 +93,29 @@
                     </select>
                     <label for="Status">Status:</label>
                     <select id="Status" name="Status" required>
-                        <option value="">Select a Laboratory</option>
+                        <option value="">Select Status</option>
                         <option value="Delivered">Delivered</option>
                         <option value="Pending">Pending</option>
                         <option value="Return">Return</option>
                         <option value="In-Progress">In-Progress</option>
-                       
+
 
                     </select>
-                  
-                    
-                     <input type="submit" name='shiftitem' value="Add Inventory"> 
+
+
+                    <input type="submit" name='shiftitem' value="Add Inventory">
                     <!-- <button name='additem' value="Generate QR Code" onclick="generateQRCode()"> -->
                     <!--button type="button"name='shiftitem' >Move Inventory</button>-->
 
                 </form>
             </div>
             <div class="details">
-            <div class="recentOrders">
+                <div class="recentOrders">
                     <div class="cardHeader">
                         <h2>Recent Shifts</h2>
                         <a href="#" class="btn">View All</a>
                     </div>
-                    
+
                     <table>
                         <thead>
                             <tr>
@@ -124,122 +124,119 @@
                                 <td>Purchase_Price</td>
                                 <td>Move To</td>
                                 <td>Status</td>
-                              
-                                
+
+
                             </tr>
                         </thead>
                         <?php
 
-            // Database connection
+                        // Database connection
 
-            //session_start();
-            include_once ('connection.php');
-
-
-            // Fetch data from the manage_invent table
-
-            $sql = "SELECT * FROM manage_invent";
-
-            $result = $conn->query($sql);
+                        //session_start();
+                        include_once('connection.php');
 
 
-            if ($result->num_rows > 0) {
+                        // Fetch data from the manage_invent table
 
-                // Display each row as a table row (<tr>)
+                        $sql = "SELECT * FROM manage_invent";
 
-                while ($row = $result->fetch_assoc()) {
-
-                    
-
-                    echo "<td>" . $row["serial_no"] . "</td>";
-                    
-
-                    echo "<td>" . $row["Inventory_Description"] . "</td>";
-                    echo "<td>" . $row["Purchase_Price"] . "</td>";
-                    echo "<td>" . $row["Move_To_Laboratory"] . "</td>";
-                    echo "<td>" . $row["Status"] . "</td>";
-                    echo "</tr>";
-
-                }
-
-            } else {
-
-                echo "<tr><td colspan='5'>No data found</td></tr>";
-
-            }
+                        $result = $conn->query($sql);
 
 
-            // Close the database connection
+                        if ($result->num_rows > 0) {
 
-            $conn->close();
+                            // Display each row as a table row (<tr>)
 
-            ?>
+                            while ($row = $result->fetch_assoc()) {
+
+
+
+                                echo "<td>" . $row["serial_no"] . "</td>";
+
+
+                                echo "<td>" . $row["Inventory_Description"] . "</td>";
+                                echo "<td>" . $row["Purchase_Price"] . "</td>";
+                                echo "<td>" . $row["Move_To_Laboratory"] . "</td>";
+                                echo "<td>" . $row["Status"] . "</td>";
+                                echo "</tr>";
+                            }
+                        } else {
+
+                            echo "<tr><td colspan='5'>No data found</td></tr>";
+                        }
+
+
+                        // Close the database connection
+
+                        $conn->close();
+
+                        ?>
                     </table>
-                
-                    
 
-                    
+
+
+
+                </div>
             </div>
+
+
+
+
         </div>
 
-            
+    </div>
 
 
-        </div>
+    <div id="qrcode"></div>
+    <script src="https://cdn.jsdelivr.net/gh/davidshimjs/qrcodejs/qrcode.min.js"></script>
 
-     </div>
+    <script>
+        function generateQRCode() {
+            var formData = new FormData(document.getElementById("inventory"));
+            var data = "";
 
+            formData.forEach(function(value, key) {
+                data += key + ": " + value + "\n";
+            });
 
-        <div id="qrcode"></div>
-        <script src="https://cdn.jsdelivr.net/gh/davidshimjs/qrcodejs/qrcode.min.js"></script>
+            if (data.trim() !== "") {
+                var qrCodeDiv = document.getElementById("qrcode");
+                qrCodeDiv.innerHTML = ""; // Clear previous QR code if any
 
-        <script>
-            function generateQRCode() {
-                var formData = new FormData(document.getElementById("inventory"));
-                var data = "";
-
-                formData.forEach(function (value, key) {
-                    data += key + ": " + value + "\n";
+                var qrcode = new QRCode(qrCodeDiv, {
+                    text: data,
+                    width: 128,
+                    height: 128
                 });
-
-                if (data.trim() !== "") {
-                    var qrCodeDiv = document.getElementById("qrcode");
-                    qrCodeDiv.innerHTML = ""; // Clear previous QR code if any
-
-                    var qrcode = new QRCode(qrCodeDiv, {
-                        text: data,
-                        width: 128,
-                        height: 128
-                    });
-                } else {
-                    alert("Please enter some data first.");
-                }
+            } else {
+                alert("Please enter some data first.");
             }
-        </script>
+        }
+    </script>
 
 
-        <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-        <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-        <script>
-            //MenuToggle
-            let toggle = document.querySelector(".toggle");
-            let navigation = document.querySelector(".navigation");
-            let main = document.querySelector(".main");
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script>
+        //MenuToggle
+        let toggle = document.querySelector(".toggle");
+        let navigation = document.querySelector(".navigation");
+        let main = document.querySelector(".main");
 
-            toggle.onclick = function () {
-                navigation.classList.toggle("active");
-                main.classList.toggle("active");
-            };
+        toggle.onclick = function() {
+            navigation.classList.toggle("active");
+            main.classList.toggle("active");
+        };
 
-            //add hovered class in selected list items
-            let list = document.querySelectorAll(".navigation li");
+        //add hovered class in selected list items
+        let list = document.querySelectorAll(".navigation li");
 
-            function activeLink() {
-                list.forEach((item) => item.classList.remove("hovered"));
-                this.classList.add("hovered");
-            }
-            list.forEach((item) => item.addEventListener("mouseover", activeLink));
-        </script>
+        function activeLink() {
+            list.forEach((item) => item.classList.remove("hovered"));
+            this.classList.add("hovered");
+        }
+        list.forEach((item) => item.addEventListener("mouseover", activeLink));
+    </script>
 
 </body>
 

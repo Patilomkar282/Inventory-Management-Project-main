@@ -71,10 +71,10 @@
 
 
                         
-       <div class="details">
+<div class="details">
             <div class="recentOrders">
                     <div class="cardHeader">
-                        <h2>MB-LAB-407-A Data</h2>
+                        <h2>BlockChain-Lab</h2>
                         <a href="#" class="btn">View All</a>
                     </div>
                     
@@ -101,7 +101,7 @@
 
             // Fetch data from the manage_invent table
 
-            $sql = "SELECT * FROM inventory_data where labrotary='MB-407-A'";
+            $sql = "SELECT * FROM inventory_data where labrotary='Blockchain-lab'";
 
             $result = $conn->query($sql);
 
@@ -124,7 +124,7 @@
 
                     echo "<td>" . $row["dsr_number"] . "</td>";
 
-                   
+               
 
                     echo "</tr>";
 
@@ -143,8 +143,6 @@
 
             ?>
                     </table>
-
-                                 
                 
                     
 

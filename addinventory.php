@@ -96,14 +96,14 @@
                         <option value="MB-409">MB-409</option>
                         <option value="MB-413">MB-413</option>
                         <option value="MB-414">MB-414</option>
+                        <option value="Blockchain-lab">Blockchain-lab</option>
 
                     </select>
                     <label for="Purchase-Price">Purchase Price:</label>
                     <input type="number" id="Purchase-Price" name="Purchase_Price" required>
                     <label for="dsr-number">DSR Number:</label>
                     <input type="text" id="dsr-number" name="dsr_number" required>
-                    <label for="Assistant-Confirmed">Assistant Confirmed:</label>
-                    <input type="text" id="Assistant-Confirmed" name="Assistant_Confirmed" required>
+                    
                     <input type="text" name="image_url" id="imageUrlInput" placeholder="Enter image URL">
                     <div id="qrCode"></div>
                     
@@ -124,7 +124,7 @@
 
 
         <div id="qrcode"></div>
-        <script src="https://cdn.jsdelivr.net/gh/davidshimjs/qrcodejs/qrcode.min.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
 
         <script>
             let qrCodeDownloadLink;
@@ -136,7 +136,7 @@
     labrotary: document.getElementById('labrotary').value,
     Purchase_Price: document.getElementById('Purchase-Price').value,
     dsr_number: document.getElementById('dsr-number').value,
-    Assistant_Confirmed: document.getElementById('Assistant-Confirmed').value
+   
   });
   var qrCode = new QRCode(document.getElementById('qrCode'), {
     text: qrData,
@@ -144,7 +144,8 @@
     height: 150,
     colorDark : "#000000",
     colorLight : "#ffffff",
-    correctLevel : QRCode.CorrectLevel.H
+   
+    correctLevel : QRCode.CorrectLevel.Q
   });
 
   // Download QR code as image file

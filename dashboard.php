@@ -73,9 +73,7 @@
                     </label>
                 </div>
                 
-                <div class="user">
-                    <img src="./images/user.jpg" />
-                </div>
+               
             </div>
 
             <!-- cards -->
@@ -277,18 +275,197 @@
                         <ion-icon name="desktop-outline"></ion-icon>
                     </div>
                 </div>
+
+
+                <div class="card">
+                    <div>
+                        <div class="numbers"> <?php 
+                            
+
+                            include_once ('connection.php');
+                            $sql = "SELECT count(*) FROM inventory_data where labrotary='Blockchain-Lab'";
+                            $result = $conn->query($sql);
+                            if ($result->num_rows > 0) {
+                                $row = $result->fetch_assoc();
+                                $count = $row['count(*)'];
+                                echo $count;
+                            } else {
+                                echo "Error: " . $conn->error;
+                             }
+                           
+
+
+
+                            ?>
+                            </div>
+                        <div class="cardName"><a href='./Labs/block-chain.php'>Blockchain-Lab</a></div>
+                       
+                    </div>
+                    <div class="iconBx">
+                        <ion-icon name="desktop-outline"></ion-icon>
+                    </div>
+                </div>
             </div>
 
             <!-- Add charts -->
 
             <div class="graphBox">
                 <div class="box">
-                    <canvas id="myChart"></canvas>
+                    <canvas id="myChart">
+                       
+                    </canvas>
                 </div>
                 <div class="box">
-                    <canvas id="earning"></canvas>
+                    <canvas id="totalInventoryCountChart"></canvas>
                 </div>
             </div>
+
+
+            
+
+            <?php
+
+
+        $conn = new mysqli("localhost", "root", "", "inventory_mgmt");
+
+  
+    if ($conn->connect_error) {
+        die("Connection failed: " . $conn->connect_error);
+    }
+
+   
+    $sql = "SELECT labrotary, COUNT(*) AS total_quantity FROM inventory_data GROUP BY labrotary";
+    $result = $conn->query($sql);
+
+    $lab_names = array();
+    $quantities = array();
+
+    if ($result->num_rows > 0) {
+        // Fetching data and storing it in arrays
+        while ($row = $result->fetch_assoc()) {
+            $lab_names[] = $row["labrotary"];
+            $quantities[] = $row["total_quantity"];
+        }
+    } else {
+        echo "0 results";
+    }
+
+
+
+       $conn->close();
+    ?>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+
+    <canvas id="myChart"></canvas>
+
+    <script>
+        var ctx = document.getElementById('myChart').getContext('2d');
+
+        const lab_names = <?php echo json_encode($lab_names) ?>;
+        const quantities = <?php echo json_encode($quantities) ?>;
+
+        var myChart = new Chart(ctx, {
+            type: 'polarArea',
+            data: {
+                labels: lab_names,
+                datasets: [{
+                    label: 'Product Count',
+                    data: quantities,
+                    backgroundColor: [
+                        'rgba(255, 99, 132, 1)',
+                        'rgba(0, 0, 255, 0.8)',
+                        'rgba(255, 206, 0, 1)',
+                        'rgba(75, 192, 192, 1)',
+                        'rgba(153, 102, 255, 1)',
+                        'rgba(255, 159, 64, 1)',
+                        'rgba(75, 255, 192, 1)'
+                    ],
+                }]
+            },
+            options: {
+                responsive: true,
+            }
+        });
+    </script>
+
+
+
+  <!-- barchart -->
+
+  <?php
+
+$conn = new mysqli("localhost", "root", "", "inventory_mgmt");
+
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+
+$sql = "SELECT Inventory_Description, labrotary, COUNT(*) AS total_count FROM inventory_data GROUP BY Inventory_Description, labrotary";
+$result = $conn->query($sql);
+
+$inventory_counts = array();
+
+if ($result->num_rows > 0) {
+    // Fetching data and storing it in an associative array
+    while ($row = $result->fetch_assoc()) {
+        $inventory_counts[$row["Inventory_Description"]][$row["labrotary"]] = $row["total_count"];
+    }
+} else {
+    echo "0 results";
+}
+
+
+?>
+
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<canvas id="totalInventoryCountChart"></canvas>
+
+<script>
+    const inventory_counts_php = <?php echo json_encode($inventory_counts) ?>;
+
+    // Debugging: Check data retrieval
+    console.log(inventory_counts_php);
+
+    // Extract labels (inventory items) and datasets (total counts for each lab) from PHP variable
+    const labels = Object.keys(inventory_counts_php);
+    const datasets = Object.values(inventory_counts_php).map((labCounts) => ({
+        label: Object.keys(labCounts).join(', '),
+        data: Object.values(labCounts),
+        backgroundColor: [
+                    'rgba(255, 99, 132, 1)',
+                    'rgba(0, 0, 255, 0.8)',
+                    'rgba(255, 206, 0, 1)',
+                   // 'rgba(75, 192, 192, 1)',
+                    //'rgba(153, 102, 255, 1)',
+                    //'rgba(255, 159, 64, 1)',
+                   // 'rgba(75, 255, 192, 1)'
+                ],// Adjust color as needed
+    }));
+
+    // Initialize the chart after DOM content is loaded
+    document.addEventListener('DOMContentLoaded', function () {
+        var ctx = document.getElementById('totalInventoryCountChart').getContext('2d');
+        var myChart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: labels,
+                datasets: datasets
+            },
+            options: {
+                responsive: true
+            }
+        });
+    });
+</script>
+
+
+  
+
+
 
             <!-- details list -->
         
@@ -310,7 +487,7 @@
                                 <td>Labrotary</td>
                                 <td>Purchase_Price</td>
                                 <td>Dsr_Number</td>
-                                <td>Assistant Confirmed</td>
+                               
                                 
                             </tr>
                         </thead>
@@ -347,7 +524,7 @@
 
                     echo "<td>" . $row["dsr_number"] . "</td>";
 
-                    echo "<td>" . $row["Assistant_Confirmed"] . "</td>";
+           
 
                     echo "</tr>";
 
@@ -376,10 +553,9 @@
 
             
 
-                <div class="recentCustomers">
+        <div class="recentCustomers">
                     <div class="cardHeader">
                         <h2>Project Members</h2>
-                        <h2>Lab Assistants</h2>
                     </div>
                     <table>
                         <tr>
@@ -388,7 +564,6 @@
                             </td>
                             <td>
                                 <h4>Tejashree<br /><span>Member 1</span></h4>
-                                <h4>Tejashree<br /><span>Assistant 1</span></h4>
                             </td>
                         </tr>
                         <tr>
@@ -416,7 +591,7 @@
                             </td>
                         </tr>
                     </table>
-                </div>
+        </div>
             </div>
         </div>
     </div>

@@ -97,6 +97,7 @@
 
             //session_start();
             include_once ('../connection.php');
+            
 
 
             // Fetch data from the manage_invent table
@@ -135,12 +136,6 @@
                 echo "<tr><td colspan='5'>No data found</td></tr>";
 
             }
-
-
-            // Close the database connection
-
-            $conn->close();
-
             ?>
                     </table>
                 
@@ -149,6 +144,80 @@
                     
             </div>
         </div>
+
+
+        <div class="details">
+            <div class="recentOrders">
+                    <div class="cardHeader">
+                        <h2>Recent Shifts</h2>
+                        <a href="#" class="btn">View All</a>
+                    </div>
+                    
+                    <table>
+                        <thead>
+                            <tr>
+                                <td>Serial No</td>
+                                <td>Inventory Description</td>
+                                <td>Purchase_Price</td>
+                                <td>Move To</td>
+                                <td>Status</td>
+                              
+                                
+                            </tr>
+                        </thead>
+                        <?php
+
+            // Database connection
+
+            //session_start();
+            // include_once ('connection.php');
+
+
+            // Fetch data from the manage_invent table
+
+            $sql = "SELECT * FROM manage_invent where Move_To_Laboratory='MB-407-B'";
+
+            $result = $conn->query($sql);
+
+
+            if ($result->num_rows > 0) {
+
+                // Display each row as a table row (<tr>)
+
+                while ($row = $result->fetch_assoc()) {
+
+                    
+
+                    echo "<td>" . $row["serial_no"] . "</td>";
+                    
+
+                    echo "<td>" . $row["Inventory_Description"] . "</td>";
+                    echo "<td>" . $row["Purchase_Price"] . "</td>";
+                    echo "<td>" . $row["Move_To_Laboratory"] . "</td>";
+                    echo "<td>" . $row["Status"] . "</td>";
+                    echo "</tr>";
+
+                }
+
+            } else {
+
+                echo "<tr><td colspan='5'>No data found</td></tr>";
+
+            }
+
+
+            // Close the database connection
+
+            $conn->close();
+
+            ?>
+         </table>
+                
+                    
+
+                    
+    </div>
+</div>
 
 
 
